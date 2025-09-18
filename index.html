@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            color: rgb(0, 255, 0);
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin: auto;
+            /* height: 100vh; */
+            width: 90vw;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>where is your pointer</h1>
+    <img src="" alt="">
+    <script>
+        let i=document.querySelector("img")
+        document.addEventListener("mousemove",(e)=>{
+            let x=e.screenX;
+            let y=e.screenY;
+            console.log(x);
+            console.log(y);
+            if(x<800){
+                if(y<300){
+                    // this is 2q
+                    i.src="images/2q.jpg"
+                }
+                else{
+                    i.src="images/3q.jpg"
+                }
+            }
+            else{
+                if(y<300){
+                    // this is 3q
+                    i.src="images/1q.jpg"
+                }
+                else{
+                    i.src="images/4q.jpg"
+                }
+            }
+        })
+    </script>
+</body>
+</html>
